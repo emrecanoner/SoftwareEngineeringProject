@@ -12,9 +12,11 @@ $message = strip_tags(htmlspecialchars($_POST['message']));
 $to = "emrecanoner67@gmail.com"; // Change this email to your //
 $subject = "$m_subject:  $name";
 $body = "You have received a new message from your website contact form.\n\n"."Here are the details:\n\nName: $name\n\n\nEmail: $email\n\nSubject: $m_subject\n\nMessage: $message";
-$header = "From: $email";
-$header .= "Reply-To: $email";	
+$headers = array("From $email", // missing colon
+    "Reply To: $email",      // missing hyphen
+    "X-Mailer: "PHP"/" . PHP_VERSION      // bad quotes
+);	
 
-if(!mail($to, $subject, $body, $header))
+if(!mail($to, $subject, $body, $headers))
   http_response_code(500);
 ?>
