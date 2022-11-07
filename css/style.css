@@ -36,6 +36,88 @@
   --font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
 }
 
+ 
+/*Instagram ve Tabloların gösterim butonları*/
+.btn-1 {
+    font-weight: 600;
+    background-color: #FFAA17;
+    border: none;
+    color: black;
+    padding: 15px;
+    width: 180px;
+    transition: all 0.5s;
+    cursor: pointer;
+}
+
+.btn-1 a{
+  font-weight: 600;
+  background-color: #FFAA17;
+  border: none;
+  color: black;
+  transition: all 0.5s;
+  cursor: pointer;
+}
+ 
+.btn-1 span {
+    cursor: pointer;
+    display: flex;
+    position: relative;
+    transition: 0.5s;
+}
+
+ 
+.btn-1 span:after {
+    content: '\00bb';
+    position: absolute;
+    opacity: 0;
+    top: -3px;
+    right: -20px;
+    transition: 0.5s;
+    font-size: 18px;
+}
+
+.btn-1 a:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: -3px;
+  right: -20px;
+  transition: 0.5s;
+  font-size: 18px;
+}
+ 
+.btn-1:hover span {
+    padding-right: 15px;
+}
+
+.btn-1:hover a {
+  padding-right: 15px;
+}
+ 
+.btn-1:hover span:after {
+    opacity: 1;
+    right: 0;
+}
+
+.btn-1:hover a:after {
+  opacity: 1;
+  right: 0;
+}
+
+#instagram{
+  width: 180px;;
+  background-color: skyblue;
+  position: relative;
+  margin: auto;
+}
+
+#databaseTable{
+  width: 180px;;
+  background-color: skyblue;
+  position: relative;
+  margin: auto;
+}
+
 *,
 *::before,
 *::after {
